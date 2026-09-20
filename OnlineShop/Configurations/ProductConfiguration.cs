@@ -55,6 +55,9 @@ namespace OnlineShop.Configurations
 
             entity.HasIndex(x => new { x.CategoryId, x.Name }).IsUnique();  //если продукт есть в категории, то зачем второй с таким же названием в одной категории.
             entity.HasIndex(x => x.Name);
+
+            entity.Property(x=>x.Price)
+                .HasColumnType("decimal(18,2)");
         }
     }
 }

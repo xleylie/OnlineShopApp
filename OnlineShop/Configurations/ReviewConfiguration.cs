@@ -23,6 +23,9 @@ namespace OnlineShop.Configurations
 
             entity.HasIndex(x => new { x.UserId, x.ProductId })
                 .IsUnique();
+
+            entity.Property(x => x.Rating)
+                .HasColumnType("decimal(18,2)");
         }
     }
 }

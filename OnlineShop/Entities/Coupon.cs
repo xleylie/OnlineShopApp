@@ -12,7 +12,7 @@ namespace OnlineShop.Entities
         [Required, MaxLength(30)]
         public string Code { get; set; } = null!;
         [Required]
-        public decimal DiscountPercent { get; set; }
+        public decimal DiscountPercentage { get; set; }
         [Required]
         public DateTime ExpiresAt { get; set; }
         public bool IsActive { get; set; }

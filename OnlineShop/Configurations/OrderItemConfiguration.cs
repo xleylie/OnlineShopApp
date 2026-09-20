@@ -31,6 +31,9 @@ namespace OnlineShop.Configurations
             entity.ToTable(x => x.HasCheckConstraint(
                 "CK_Product_UnitPrice",
                 "UnitPrice > 0"));
+
+            entity.Property(x => x.UnitPrice)
+                .HasColumnType("decimal(18,2)");
         }
     }
 }

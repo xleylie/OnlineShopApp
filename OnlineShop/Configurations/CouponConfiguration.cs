@@ -20,6 +20,9 @@ namespace OnlineShop.Configurations
 
             entity.Property(x => x.IsActive)
                 .HasDefaultValue(true);
+
+            entity.Property(x => x.DiscountPercentage)
+                .HasColumnType("decimal(18,2)");
         }
     }
 }
